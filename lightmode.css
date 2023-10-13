@@ -1,0 +1,48 @@
+:root {
+  --scrollcol: #b0b0b0;
+  --bgcol-main: #eff7ff;
+  --textcol-main: #333333;
+  --bgcol-header: #ffffff;
+  --iconcol-theme: #ffffff;
+}
+
+
+/* sun icon */
+.theme-circle {
+  transform: translate(5px, 5px) scale(0.5);
+}
+
+.theme-sunray {
+  transform-origin: 5px 5px;
+}
+
+.raypiece {
+  transform: translate(4.75px, 0.25px);
+}
+
+.theme-button .s1 {
+  transform: rotate(0deg);
+}
+.theme-button .s2 {
+  transform: rotate(45deg);
+}
+.theme-button .s3 {
+  transform: rotate(90deg);
+}
+.theme-button .s4 {
+  transform: rotate(135deg);
+}
+.theme-button .s5 {
+  transform: rotate(180deg);
+}
+.theme-button .s6 {
+  transform: rotate(225deg);
+}
+.theme-button .s7 {
+  transform: rotate(270deg);
+}
+.theme-button .s8 {
+  transform: rotate(320deg);
+}
+
+/*x="4.75" y="0.25"*/
