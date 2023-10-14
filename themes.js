@@ -7,10 +7,10 @@ var theme = "1"
 function change_theme() {
   if (theme == 0) {
     // dark theme
-    document.getElementById("theme-css").setAttribute("href", "darkmode.css");
+    document.getElementById("theme-css").setAttribute("href", "../darkmode.css");
   } else {
     // light theme
-    document.getElementById("theme-css").setAttribute("href", "lightmode.css");
+    document.getElementById("theme-css").setAttribute("href", "../lightmode.css");
   }
 }
 
@@ -40,7 +40,19 @@ function toggle_theme() {
 
 setTimeout( () => {
   document.getElementById("js-styling").innerHTML +=  `
-.theme-button circle, .theme-button rect {
+.theme-button circle, .theme-button rect, .theme-moonmask, .raypiece {
   transition-duration: 500ms;
+}
+.raypiece rect {
+  transition-duration: 0ms;
+}
+.ctr1 {
+  transition: background-color 250ms;
+}
+.ctr2 {
+  transition: color 250ms;
+}
+.ctr3 {
+  transition: background-color 250ms, color 250ms;
 }`;
-}, 1000);
+}, 1500);

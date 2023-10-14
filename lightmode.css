@@ -2,8 +2,12 @@
   --scrollcol: #b0b0b0;
   --bgcol-main: #eff7ff;
   --textcol-main: #333333;
-  --bgcol-header: #ffffff;
-  --iconcol-theme: #ffffff;
+  --bgcol-header: #eeeeee;
+  --iconcol-theme: #242424;
+  --textcol-a: #454e61;
+  --textcol-a-hover: #5f6a83;
+  --selection: #a1c7ff70;
+  --bgcol-footer: #eeeeee;
 }
 
 
@@ -43,6 +47,13 @@
 }
 .theme-button .s8 {
   transform: rotate(320deg);
+}
+
+.theme-moonmask {
+  transform: translate(0px, 0px) scale(0);
+}
+.sunrays {
+  opacity: 1;
 }
 
 /*x="4.75" y="0.25"*/
