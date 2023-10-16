@@ -8,6 +8,13 @@
   --textcol-a-hover: #5f6a83;
   --selection: #a1c7ff70;
   --bgcol-footer: #dbdbdb;
+  --bgcol-slideimgs: #e2e6eb;
+  --bgcol-slidetext: #e2e6eb50;
+  --textcol-slidetext: #1d1d1d;
+  --fillcol-slidearrow: #333333;
+  --bgcol-creators: #e2e6eb;
+  --bgcol-membercard: #d7d9db;
+  --textcol-membertitle: #666666;
 }
 
 

@@ -84,6 +84,7 @@ p {
   padding: 2.5px;
   padding-bottom: 3px;
   gap: 10px;
+  z-index: 100;
 }
 
 .header h1 {
@@ -143,11 +144,172 @@ p {
 
 .main {
   min-height: calc(100%);
+  text-align: center;
+}
+
+.sectionheader {
+  font-family: Lato-Bold;
+  margin-bottom: 10px;
+}
+
+/*
+  ▄▄               ▄                                                                ▄      ▄▄                     
+  ▀▀              ██                                                               ██      ▀▀                     
+ ▀██   ▀█▄▀▀█▄  ▀▀██▀▀   ▀█▄█▀█▄  ▄█▀▀▀█▄             ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▀▀██▀▀   ▀██   ▄█▀▀▀█▄  ▀█▄▀▀█▄  
+  ██    ██  ██    ██      ██  ▀▀  ██   ██              ▀█▄▄    ██▀▀▀▀▀  ██         ██      ██   ██   ██   ██  ██  
+  ██    ██  ██    ██ ▄▄   ██      ██   ██             ▄▄  ▀█▄  ██   ▄▄  ██   ▄▄    ██ ▄▄   ██   ██   ██   ██  ██  
+ ▀▀▀▀   ▀▀  ▀▀     ▀▀▀   ▀▀▀▀      ▀▀▀▀▀               ▀▀▀▀▀    ▀▀▀▀▀    ▀▀▀▀▀      ▀▀▀   ▀▀▀▀   ▀▀▀▀▀    ▀▀  ▀▀  
+*/
+
+.intro-section {
+  width: 100vw;
+  text-align: center;
+}
+
+.intro-section h1 {
+  font-size: 2.5em;
+  font-family: Lato-Bold;
+}
+
+.general-description {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  text-align: center;
+  overflow: wrap;
+}
+
+
+/*
+          ▄▄▄    ▄▄      ▄▄▄                        ▄▄                              
+           ██    ▀▀       ██                        ▀▀                              
+ ▄█▀▀▀█▄   ██   ▀██    ▄█▀██   ▄█▀▀▀█▄             ▀██   ███▄██▄  ▄█▀▀▄█▀  ▄█▀▀▀█▄  
+  ▀█▄▄     ██    ██   ██  ██   ██▀▀▀▀▀              ██   ██ █ ██  ██  ██    ▀█▄▄    
+ ▄▄  ▀█▄   ██    ██   ██  ██   ██   ▄▄              ██   ██ █ ██  ██  ██   ▄▄  ▀█▄  
+  ▀▀▀▀▀   ▀▀▀▀  ▀▀▀▀   ▀▀▀ ▀▀   ▀▀▀▀▀              ▀▀▀▀  ▀▀   ▀▀   ▀▀▀██    ▀▀▀▀▀   
+                                                                  ▀█▄▄█▀            
+*/
+
+.slider-section {
+  width: 100vw;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
 }
 
 
 
+.slideimgs {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  border-radius: 15px;
+  background-color: var(--bgcol-slideimgs);
+  width: calc(100vw - 10em);
+  z-index: 1;
+}
 
+.slide-description {
+  color: var(--textcol-slidetext);
+  background-color: var(--bgcol-slidetext);
+  font-size: 2.5px;
+  font-family: Lato-Bold;
+  position: fixed;
+  bottom: 0px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.slide-description .sldesc {
+  text-align: center;
+}
+
+.slide-arrow {
+  cursor: pointer;
+  fill: var(--fillcol-slidearrow);
+  position: fixed;
+}
+.slide-arrow.left {
+  left: 0px;
+  transform: translate(2px, 50px) rotate(-45deg);
+}
+.slide-arrow.right {
+  transform: translate(198px, 50px) rotate(-225deg);
+}
+
+/*
+  ▄▄                        ▄▄▄                        ▄     ▄▄▄                                               ▄      ▄▄                     
+  ▀▀                         ██                       ██      ██                                              ██      ▀▀                     
+ ▀██   ▀█▄▀▀█▄            ▄█▀██   ▄█▀▀▀█▄  ▀█▄▀▀█▄  ▀▀██▀▀    ██▄▀█▄             ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▀▀██▀▀   ▀██   ▄█▀▀▀█▄  ▀█▄▀▀█▄  
+  ██    ██  ██  ▀▀▀▀▀▀▀  ██  ██   ██▀▀▀▀▀   ██  ██    ██      ██  ██              ▀█▄▄    ██▀▀▀▀▀  ██         ██      ██   ██   ██   ██  ██  
+  ██    ██  ██           ██  ██   ██   ▄▄   ██  ██    ██ ▄▄   ██  ██             ▄▄  ▀█▄  ██   ▄▄  ██   ▄▄    ██ ▄▄   ██   ██   ██   ██  ██  
+ ▀▀▀▀   ▀▀  ▀▀            ▀▀▀ ▀▀   ▀▀▀▀▀    ██▀▀▀      ▀▀▀   ▀▀▀  ▀▀              ▀▀▀▀▀    ▀▀▀▀▀    ▀▀▀▀▀      ▀▀▀   ▀▀▀▀   ▀▀▀▀▀    ▀▀  ▀▀  
+                                           ▄██▄                                                                                              
+*/
+
+
+.indepth-section .sectionheader {
+  margin-top: 3em;
+}
+
+
+/*
+                                        ▄                                                                         ▄      ▄▄                     
+                                       ██                                                                        ██      ▀▀                     
+ ▄█▀▀▀█▄  ▀█▄█▀█▄  ▄█▀▀▀█▄   ▀▀▀█▄   ▀▀██▀▀   ▄█▀▀▀█▄  ▀█▄█▀█▄  ▄█▀▀▀█▄             ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▀▀██▀▀   ▀██   ▄█▀▀▀█▄  ▀█▄▀▀█▄  
+ ██        ██  ▀▀  ██▀▀▀▀▀  ▄█▀▀██     ██     ██   ██   ██  ▀▀   ▀█▄▄                ▀█▄▄    ██▀▀▀▀▀  ██         ██      ██   ██   ██   ██  ██  
+ ██   ▄▄   ██      ██   ▄▄  ██  ██     ██ ▄▄  ██   ██   ██      ▄▄  ▀█▄             ▄▄  ▀█▄  ██   ▄▄  ██   ▄▄    ██ ▄▄   ██   ██   ██   ██  ██  
+  ▀▀▀▀▀   ▀▀▀▀      ▀▀▀▀▀    ▀▀▀ ▀▀     ▀▀▀    ▀▀▀▀▀   ▀▀▀▀      ▀▀▀▀▀               ▀▀▀▀▀    ▀▀▀▀▀    ▀▀▀▀▀      ▀▀▀   ▀▀▀▀   ▀▀▀▀▀    ▀▀  ▀▀  
+*/
+
+.creators-section {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+
+}
+.team-box {
+  background-color: var(--bgcol-creators);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+
+.team-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  background-color: var(--bgcol-membercard);
+  padding: 10px;
+  padding-right: 20px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.member-card img {
+  height: 8em;
+  border-radius: 50%;
+}
+
+.membertext {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.membertext .name {
+  font-family: Lato-Bold;
+  font-size: 1.75em;
+}
+
+.membertext .title {
+  color: var(--textcol-membertitle);
+}
 
 /*
    ▄▄▄                                       

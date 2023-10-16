@@ -8,6 +8,12 @@
   --textcol-a-hover: #ccd9f7;
   --selection: #3f86f170;
   --bgcol-footer: #303030;
+  --bgcol-slideimgs: #383838;
+  --bgcol-slidetext: #38383850;
+  --textcol-slidetext: #dddddd;
+  --fillcol-slidearrow: #dddddd;
+  --bgcol-creators: #3d3d3d;
+  --bgcol-membercard: #444444;
 }
 
 .theme-circle {
