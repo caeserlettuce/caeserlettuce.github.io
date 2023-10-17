@@ -54,5 +54,8 @@ setTimeout( () => {
 }
 .ctr3 {
   transition: background-color 250ms, color 250ms;
+}
+.ctr4 {
+  transition: fill 250ms;
 }`;
 }, 1500);

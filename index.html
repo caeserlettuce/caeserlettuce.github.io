@@ -23,8 +23,10 @@
       </a>
       <h1 class="ctr2" style="text-decoration: none !important;"><a href="/">Fruit Brawl</a></h1>
 
-      
-      <svg class="theme-button push" id="theme-button" viewBox="0 0 10 10">
+
+      <!-- <h2 class="push"><a href="../about" class="uline">about</a></h2>
+      <h2><a href="../contact" class="uline">contact</a></h2> -->
+      <svg class="theme-button" id="theme-button" viewBox="0 0 10 10">
         <g onclick="toggle_theme()" style="cursor: pointer;">
           <mask id="moonmask">
             <g class="moonmask" x="0" y="0">
@@ -96,20 +98,78 @@
       </svg>
     </div>
     <div class="main">
-      <h1 class="ctr2">Fruit Brawl is coming soon!</h1>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!-- <p class="ctr2">funny funny funny funny</p> -->
+      <div class="intro-section">
+        <h1 class="ctr2">Welcome to Fruit Brawl!</h1>
+        <br>
+        <h2 class="general-description ctr2">A deck builder where the shop fights back!</h2>
+        <br><br><br><br><br><br>
+      </div>
+      <div class="slider-section">
+        <h1 class="sectionheader ctr2">Image Gallery</h1>
+        <svg class="slideimgs ctr1" id="slideimgs" viewbox="0 0 20 10" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+          <g class="slideimgs-slide" id="slideimgs-slide">
+            <!--slide images-->
+          </g>
+          <g class="slide-arrow left ctr4" onclick="slide_images(-1)">
+            <rect x="0" y="0" width="4" height="1" fill="inherit" />
+            <rect x="0" y="0" width="1" height="4" fill="inherit" />
+            <rect x="0" y="-2.75" width="4.25" height="5.5" style="transform: rotate(45deg);" fill="transparent"/>
+          </g>
+          <g class="slide-arrow right ctr4" onclick="slide_images(1)">
+            <rect x="0" y="0" width="4" height="1" fill="inherit" />
+            <rect x="0" y="0" width="1" height="4" fill="inherit" />
+            <rect x="0" y="-2.75" width="4.25" height="5.5" style="transform: rotate(45deg);" fill="transparent"/>
+          </g>
+
+        </svg>
+      </div>
+
+      <div class="indepth-section">
+        <h1 class="sectionheader ctr2">What is Fruit Brawl??</h1>
+        <h2 class="general-description ctr2">In FruitBrawl, the shop is an obstacle, getting in the way of your dreams to kill your opponent. If you leave the fruit in the shop too long, they get overripe and start to attack you! Don't let the cute art fool you, FruitBrawl is a highly competitive game that takes inspiration from games like Magic: The Gathering, Star Realms, Super Auto Pets, and more.</h2>
+      </div>
+      <br><br><br>
+      <h1><a href="/how_to_play" class="uline ctr2">How to Play</a></h1>
+      <br><br><br>
+      <div class="creators-section">
+        <div class="team-box ctr1">
+          <h1 class="sectionheader ctr2">The Fruit Brawl Team</h1>
+          <div class="team-div" id="team-div">
+            <!-- <div class="member-card">
+              <img src="/assets/profiles/potato429.png">
+              <div class="membertext">
+                <p class="name">Anne Jacobson-Mowrey</p>
+                <p class="title">Lead Designer</p>
+                <p class="description">funny</p>
+              </div>
+            </div> -->
+
+
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <br>
     </div>
     <div class="footer ctr1">
       <h2 class="ctr2">©2023 Fruit Brawl. <span style="margin-left: 10px;">Designed by <a href="https://dapug.lol" class="uline">dapug.lol</span></a></h2>
-      <img src="../assets/siteimg/made_wth_notepad.png" class="push footer-card">
-      <img src="../assets/siteimg/technoblade.png" class="footer-card">
     </div>
 
   
     
   
   
-  
+  <script src="../info.js"></script>
   <script src="../themes.js"></script>
+  <script src="../main.js"></script>
   
   </body>
 </html>
