@@ -27,7 +27,13 @@ var fruitbrawl_team = [
     {
       "name": "Eamon Keating",
       "photo": "../assets/profiles/caffy.png",
-      "title": "<span style=\"font-size: 0.75em;\">(The coolest)</span> Playtester",
+      "title": "<!--<span style=\"font-size: 0.75em;\">(The coolest)</span>--> Playtester",
+      "description": "funny"
+    },
+    {
+      "name": "Aurora Bakke-Cotton",
+      "photo": "../assets/profiles/aurora.png",
+      "title": "  Playtester",
       "description": "funny"
     },
   ]
