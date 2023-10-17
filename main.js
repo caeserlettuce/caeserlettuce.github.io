@@ -6,7 +6,7 @@ var slideimgs = [
     "description": "Fruit Brawl concept art"
   },
   {
-    "image": "/assets/siteimg/fbrawl-1.jpg",
+    "image": "/assets/siteimg/fbrawl-3.jpg",
     "description": "Fruit Brawl play testing"
   },
   {
@@ -19,30 +19,13 @@ var slideimgs = [
   }
 ]
 
-var fruitbrawl_team = [
-  {
-    "name": "Potato429",
-    "photo": "/assets/profile/potato429.png",
-    "title": "Fruit Brawl Lead"
-  },
-  {
-    "name": "RammyTheDuck",
-    "photo": "/assets/profile/rammytheduck.png",
-    "title": "Lead Artist & Designer"
-  },
-  {
-    "name": "pugface_",
-    "photo": "/assets/profile/pugface.png",
-    "title": "Webpage Designer"
-  },
-]
 
 
 var slideimgs_length = slideimgs.length;
 var slideimgs_slide = document.getElementById("slideimgs-slide");
 var slideimgs_index = 0;
 var slide_transition = 2000; // anne reference ?????
-var slsf = 100; // size factor (doesnt apply to arrows and will screw things up now)
+var slsf = 100; // size factor (doensnt apply to arrows and will screw things up now)
 
 function init_slideimgs() {
   var add_html = "";
@@ -102,5 +85,15 @@ var slider_interval = setInterval( () => {
 
 
 for (i in fruitbrawl_team) {
-  
+  var add_html = `
+<div class="member-card ctr1">
+  <img src="${fruitbrawl_team[i]["photo"]}">
+  <div class="membertext">
+    <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
+    <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
+    <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
+  </div>
+</div>`;
+  document.getElementById("team-div").innerHTML += add_html;
 }
+

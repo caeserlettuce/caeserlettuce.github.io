@@ -281,6 +281,8 @@ p {
 .team-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .member-card {
@@ -309,6 +311,12 @@ p {
 
 .membertext .title {
   color: var(--textcol-membertitle);
+}
+
+.membertext .description {
+  color: var(--textcol-membertitle);
+  font-size: 1.125em;
+  margin-top: 5px;
 }
 
 /*
