@@ -152,6 +152,10 @@ p {
   margin-bottom: 10px;
 }
 
+.main-top svg {
+  height: 3em;
+}
+
 /*
   ▄▄               ▄                                                                ▄      ▄▄                     
   ▀▀              ██                                                               ██      ▀▀                     
