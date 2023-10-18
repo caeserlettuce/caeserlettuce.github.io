@@ -58,10 +58,14 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
 p {
   font-size: 1.5em;
+}
+
+.centerer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 /*
@@ -102,6 +106,7 @@ p {
 .theme-button {
   width: 3em;
   fill: var(--iconcol-theme);
+  margin-right: 2px;
 }
 .moonmask {
   transform: rotate(180deg);
@@ -270,7 +275,7 @@ p {
 
 .creators-section {
   display: flex;
-  width: 100vw;
+  width: calc(100vw - 10em);
   justify-content: center;
 
 }
@@ -322,6 +327,51 @@ p {
   color: var(--textcol-membertitle);
   font-size: 1.125em;
   margin-top: 5px;
+}
+
+
+/*
+                             ▄▄            ▄▄▄                                                     ▄      ▄▄                     
+                             ▀▀             ██                                                    ██      ▀▀                     
+ ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▀██    ▀▀▀█▄    ██   ▄█▀▀▀█▄             ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▄█▀▀▀█▄  ▀▀██▀▀   ▀██   ▄█▀▀▀█▄  ▀█▄▀▀█▄  
+  ▀█▄▄    ██   ██  ██        ██   ▄█▀▀██    ██    ▀█▄▄                ▀█▄▄    ██▀▀▀▀▀  ██         ██      ██   ██   ██   ██  ██  
+ ▄▄  ▀█▄  ██   ██  ██   ▄▄   ██   ██  ██    ██   ▄▄  ▀█▄             ▄▄  ▀█▄  ██   ▄▄  ██   ▄▄    ██ ▄▄   ██   ██   ██   ██  ██  
+  ▀▀▀▀▀    ▀▀▀▀▀    ▀▀▀▀▀   ▀▀▀▀   ▀▀▀ ▀▀  ▀▀▀▀   ▀▀▀▀▀               ▀▀▀▀▀    ▀▀▀▀▀    ▀▀▀▀▀      ▀▀▀   ▀▀▀▀   ▀▀▀▀▀    ▀▀  ▀▀  
+*/
+                                                                                                                                 
+.socials {
+  background-color: var(--bgcol-socials);
+  width: fit-content;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+
+.socials-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-icon {
+  height: 5em;
+  fill: var(--fillcol-socials);
+  cursor: pointer;
+}
+
+.socials-icon:hover {
+  fill: var(--fillcol-socials-hover);
+}
+
+.instapath {
+  fill: var(--fillcol-socials);
+  transition: fill 200ms;
+}
+
+.instagram-icon:hover .instapath {
+  fill: transparent !important;
 }
 
 /*

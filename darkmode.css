@@ -14,6 +14,9 @@
   --fillcol-slidearrow: #dddddd;
   --bgcol-creators: #313131;
   --bgcol-membercard: #3a3a3a;
+  --bgcol-socials: #313131;
+  --fillcol-socials: #e0e0e0;
+  --fillcol-socials-hover: #cecece;
 }
 
 .theme-circle {

@@ -3,19 +3,23 @@
 var slideimgs = [
   {
     "image": "/assets/siteimg/fbrawl_art1.jpg",
-    "description": "FruitBrawl concept art"
+    "description": "FruitBrawl concept art",
+    "alt": "A sketchbook drawing of fruits from FruitBrawl battling, with an Ackee and Avocado in the front."
   },
   {
     "image": "/assets/siteimg/fbrawl-3.jpg",
-    "description": "FruitBrawl playtesting"
+    "description": "FruitBrawl playtesting",
+    "alt": "An image of a black table with printed out FruitBrawl cards laid out, in the middle of a FruitBrawl game."
   },
   {
     "image": "/assets/siteimg/fruitbrawl-coin.png",
-    "description": "FruitBrawl logo on a wooden coin"
+    "description": "FruitBrawl logo on a wooden coin",
+    "alt": "The FruitBrawl logo, laser-burned onto a small wooden coin."
   },
   {
     "image": "/assets/siteimg/fbrawl-2.jpg",
-    "description": "FruitBrawl Kiwi build"
+    "description": "FruitBrawl Kiwi build",
+    "alt": "A FruitBrawl build on a wooden table, called the \\\"Kiwi Build\\\""
   }
 ]
 
@@ -68,6 +72,14 @@ function init_slideimgs() {
     
   }
   //add_html += `<image href="${slideimgs[0]}" x="${slideimgs_length * 20}" width="20" height="10" />\n`;
+
+
+  // making the alt text
+  var alt_text = "Animated image gallery; ";
+  for (i in slideimgs) {
+    alt_text += `Slide ${parseInt(i) + 1}: ${slideimgs[i]["alt"]} `;
+  }
+  document.getElementById("slideimgs").setAttribute("alt", alt_text);
 
   slideimgs_slide.innerHTML = add_html;
   slideimgs_slide.style.transitionDuration = `${slide_transition}ms`;
@@ -143,7 +155,7 @@ var slider_interval = setInterval( () => {
 for (i in fruitbrawl_team) {
   var add_html = `
 <div class="member-card ctr1">
-  <img src="${fruitbrawl_team[i]["photo"]}">
+  <img src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
   <div class="membertext">
     <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
     <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
