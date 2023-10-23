@@ -57,5 +57,15 @@ setTimeout( () => {
 }
 .ctr4 {
   transition: fill 250ms;
+}
+.ctr5 {
+  transition: stroke 250ms;
+}
+.ctr6 {
+  transition: stroke 250ms, fill 250ms;
+}
+.ctr7 {
+  transition-duration: 250ms;
 }`;
-}, 1500);
+
+}, 1000);

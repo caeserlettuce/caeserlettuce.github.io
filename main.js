@@ -3,19 +3,23 @@
 var slideimgs = [
   {
     "image": "/assets/siteimg/fbrawl_art1.jpg",
-    "description": "FruitBrawl concept art"
+    "description": "FruitBrawl concept art",
+    "alt": "A sketchbook drawing of fruits from FruitBrawl battling, with an Ackee and Avocado in the front."
   },
   {
     "image": "/assets/siteimg/fbrawl-3.jpg",
-    "description": "FruitBrawl playtesting"
+    "description": "FruitBrawl playtesting",
+    "alt": "An image of a black table with printed out FruitBrawl cards laid out, in the middle of a FruitBrawl game."
   },
   {
     "image": "/assets/siteimg/fruitbrawl-coin.png",
-    "description": "FruitBrawl logo on a wooden coin"
+    "description": "FruitBrawl logo on a wooden coin",
+    "alt": "The FruitBrawl logo, laser-burned onto a small wooden coin."
   },
   {
     "image": "/assets/siteimg/fbrawl-2.jpg",
-    "description": "FruitBrawl Kiwi build"
+    "description": "FruitBrawl Kiwi build",
+    "alt": "A FruitBrawl build on a wooden table, called the \\\"Kiwi Build\\\""
   }
 ]
 
@@ -68,6 +72,14 @@ function init_slideimgs() {
     
   }
   //add_html += `<image href="${slideimgs[0]}" x="${slideimgs_length * 20}" width="20" height="10" />\n`;
+
+
+  // making the alt text
+  var alt_text = "Animated image gallery; ";
+  for (i in slideimgs) {
+    alt_text += `Slide ${parseInt(i) + 1}: ${slideimgs[i]["alt"]} `;
+  }
+  document.getElementById("slideimgs").setAttribute("alt", alt_text);
 
   slideimgs_slide.innerHTML = add_html;
   slideimgs_slide.style.transitionDuration = `${slide_transition}ms`;
@@ -139,20 +151,63 @@ var slider_interval = setInterval( () => {
 }, 7000)
 
 
+function generate_team(holiday) {
+  final_html = "";
+  for (i in fruitbrawl_team) {
 
-for (i in fruitbrawl_team) {
-  var add_html = `
-<div class="member-card ctr1">
-  <img src="${fruitbrawl_team[i]["photo"]}">
-  <div class="membertext">
-    <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
-    <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
-    <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
-  </div>
-</div>`;
-  document.getElementById("team-div").innerHTML += add_html;
+    if (holiday == "december") {
+      var add_html = `
+      <div class="member-card ctr1">
+        <span style="position: relative;">
+          <img class="member-image round" src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
+          <svg class="christmas-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" >
+            <g class="christmashat">
+              <path d="M 5,25 Q 8,19 11,15 15,10 25,10 32,10.5 36,14 38,16 38,16 L 36,19 Q 34,17 32,17 29,17 29,20 29,24 33,25 Z" fill="red" stroke="red" />
+              <circle cx="5" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="10" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="15" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="20" cy="32" r="4" fill="#e6e6e6" />
+              <circle cx="25" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="30" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="35" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="7" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="12" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="17" cy="28" r="4" fill="#e6e6e6" />
+              <circle cx="22" cy="28" r="4" fill="#e6e6e6" />
+              <circle cx="27" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="32" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="38" cy="16" r="2" fill="#e6e6e6" />
+              <circle cx="38" cy="19" r="2" fill="#e6e6e6" />
+              <circle cx="36" cy="19" r="2" fill="#e6e6e6" />
+              <circle cx="36" cy="16" r="2" fill="#e6e6e6" />
+            </g>
+          </svg>
+        </span>
+        <div class="membertext">
+          <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
+          <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
+          <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
+        </div>
+      </div>`;
+        final_html += add_html;
+    } else {
+      var add_html = `
+      <div class="member-card ctr1">
+        <img class="member-image round" src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
+        <div class="membertext">
+          <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
+          <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
+          <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
+        </div>
+      </div>`;
+        final_html += add_html;
+    }
+    
+  }
+  document.getElementById("team-div").innerHTML = final_html;
 }
 
+generate_team();
 
 
 function check_mobile() {
