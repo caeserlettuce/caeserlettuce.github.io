@@ -14,9 +14,14 @@
   --fillcol-slidearrow: #dddddd;
   --bgcol-creators: #313131;
   --bgcol-membercard: #3a3a3a;
-  --bgcol-socials: #313131;
+  --bgcol-socials: #3b3b3b;
   --fillcol-socials: #e0e0e0;
   --fillcol-socials-hover: #cecece;
+  --christmas-string: #525252;
+  --christmas-light1: #e75151;
+  --christmas-light2: #49ce49;
+  --christmas-light3: #5252e0;
+  --christmas-light4: #ffffff;
 }
 
 .theme-circle {

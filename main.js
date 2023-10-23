@@ -151,20 +151,63 @@ var slider_interval = setInterval( () => {
 }, 7000)
 
 
+function generate_team(holiday) {
+  final_html = "";
+  for (i in fruitbrawl_team) {
 
-for (i in fruitbrawl_team) {
-  var add_html = `
-<div class="member-card ctr1">
-  <img src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
-  <div class="membertext">
-    <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
-    <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
-    <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
-  </div>
-</div>`;
-  document.getElementById("team-div").innerHTML += add_html;
+    if (holiday == "december") {
+      var add_html = `
+      <div class="member-card ctr1">
+        <span style="position: relative;">
+          <img class="member-image round" src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
+          <svg class="christmas-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" >
+            <g class="christmashat">
+              <path d="M 5,25 Q 8,19 11,15 15,10 25,10 32,10.5 36,14 38,16 38,16 L 36,19 Q 34,17 32,17 29,17 29,20 29,24 33,25 Z" fill="red" stroke="red" />
+              <circle cx="5" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="10" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="15" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="20" cy="32" r="4" fill="#e6e6e6" />
+              <circle cx="25" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="30" cy="31" r="4" fill="#e6e6e6" />
+              <circle cx="35" cy="30" r="4" fill="#e6e6e6" />
+              <circle cx="7" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="12" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="17" cy="28" r="4" fill="#e6e6e6" />
+              <circle cx="22" cy="28" r="4" fill="#e6e6e6" />
+              <circle cx="27" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="32" cy="27" r="4" fill="#e6e6e6" />
+              <circle cx="38" cy="16" r="2" fill="#e6e6e6" />
+              <circle cx="38" cy="19" r="2" fill="#e6e6e6" />
+              <circle cx="36" cy="19" r="2" fill="#e6e6e6" />
+              <circle cx="36" cy="16" r="2" fill="#e6e6e6" />
+            </g>
+          </svg>
+        </span>
+        <div class="membertext">
+          <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
+          <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
+          <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
+        </div>
+      </div>`;
+        final_html += add_html;
+    } else {
+      var add_html = `
+      <div class="member-card ctr1">
+        <img class="member-image round" src="${fruitbrawl_team[i]["photo"]}" alt="${fruitbrawl_team[i]["alt"]}">
+        <div class="membertext">
+          <p class="name ctr2">${fruitbrawl_team[i]["name"]}</p>
+          <p class="title ctr2">${fruitbrawl_team[i]["title"]}</p>
+          <!--<p class="description ctr2">${fruitbrawl_team[i]["description"]}</p>-->
+        </div>
+      </div>`;
+        final_html += add_html;
+    }
+    
+  }
+  document.getElementById("team-div").innerHTML = final_html;
 }
 
+generate_team();
 
 
 function check_mobile() {

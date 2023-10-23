@@ -303,8 +303,11 @@ p {
   display: flex;
 }
 
-.member-card img {
+.member-image {
   height: 8em;
+}
+
+.round {
   border-radius: 50%;
 }
 
