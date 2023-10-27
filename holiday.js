@@ -18,7 +18,8 @@ var holiday_stuff = document.getElementById("holiday_stuff");
 
 switch (month_day) {
   case `december`:                                                       // christmas
-    holiday_stuff.innerHTML += `
+    if (window.location.pathname == "/") {
+      holiday_stuff.innerHTML += `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 20" class="christmaslights-svg">
 
   <defs>
@@ -100,12 +101,12 @@ switch (month_day) {
 
 </svg> 
 `;
-    function christmaslight_change() {
-      var holiday_styling = document.getElementById("holiday-styling");
+      function christmaslight_change() {
+        var holiday_styling = document.getElementById("holiday-styling");
 
-      switch (christmaslight_index % 4) {
-        case 1:
-          holiday_styling.innerHTML = `
+        switch (christmaslight_index % 4) {
+          case 1:
+            holiday_styling.innerHTML = `
 .light1 {
   fill: var(--christmas-light4);
   stroke: var(--christmas-light4);
@@ -135,9 +136,9 @@ switch (month_day) {
   stop-color: var(--christmas-light3);
 }
 `;
-        break;
-        case 2:
-          holiday_styling.innerHTML = `
+          break;
+          case 2:
+            holiday_styling.innerHTML = `
 .light1 {
   fill: var(--christmas-light3);
   stroke: var(--christmas-light3);
@@ -167,9 +168,9 @@ switch (month_day) {
   stop-color: var(--christmas-light2);
 }
 `;
-        break;
-        case 3:
-          holiday_styling.innerHTML = `
+          break;
+          case 3:
+            holiday_styling.innerHTML = `
 .light1 {
   fill: var(--christmas-light2);
   stroke: var(--christmas-light2);
@@ -199,9 +200,9 @@ switch (month_day) {
   stop-color: var(--christmas-light1);
 }
 `;
-        break;
-        default: // also 0
-          holiday_styling.innerHTML = `
+          break;
+          default: // also 0
+            holiday_styling.innerHTML = `
 .light1 {
   fill: var(--christmas-light1);
   stroke: var(--christmas-light1);
@@ -231,13 +232,14 @@ switch (month_day) {
   stop-color: var(--christmas-light4);
 }
 `;
+        }
+        christmaslight_index += 1;
       }
-      christmaslight_index += 1;
+      christmaslight_change();
+      christmaslight_interval = setInterval(christmaslight_change, 1000);
+      generate_team("december");
     }
-    christmaslight_change();
-    christmaslight_interval = setInterval(christmaslight_change, 1000);
-    generate_team("december");
-    break;
+      break;
   default:
     console.log("nothing interesting today :pensive:");
 }
