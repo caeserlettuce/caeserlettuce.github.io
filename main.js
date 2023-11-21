@@ -1,10 +1,15 @@
 
 
 var slideimgs = [
-  {
+  /*{
     "image": "/assets/siteimg/fbrawl_art1.jpg",
     "description": "FruitBrawl concept art",
     "alt": "A sketchbook drawing of fruits from FruitBrawl battling, with an Ackee and Avocado in the front."
+  },*/
+  {
+    "image": "/assets/siteimg/fbrawl_art2.png",
+    "description": "FruitBrawl concept art",
+    "alt": "A digital drawing of Apple waving, with the text \"Fruit Brawl\" below."
   },
   {
     "image": "/assets/siteimg/fbrawl-3.jpg",
