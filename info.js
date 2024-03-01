@@ -1,6 +1,6 @@
 var fruitbrawl_team = [
     {
-      "name": "Anne Jacobson-Mowery",
+      "name": "Anne J.",// /Jacobson-Mowery
       "photo": "../assets/profiles/potato429.png",
       "title": "Lead Designer",
       "description": "funny",
@@ -8,7 +8,7 @@ var fruitbrawl_team = [
       "alt": "Icon for Anne: A drawing of a strawberry with legs, with a purple background."
     },
     {
-      "name": "Kivrin Matthies",
+      "name": "Kivrin M.", // Matthies
       "photo": "../assets/profiles/kivrin.png",
       "title": "Co-Designer & Playtester",
       "description": "funny",
@@ -16,7 +16,7 @@ var fruitbrawl_team = [
       "alt": "Icon for Kivrin: a photo of Kivrin."
     },
     {
-      "name": "Andy Jacobson-Mowery",
+      "name": "Andy J.", // Jacobson-Mowery
       "photo": "../assets/profiles/rammytheduck.png",
       "title": "Lead Artist",
       "description": "funny",
@@ -24,13 +24,13 @@ var fruitbrawl_team = [
       "alt": "Icon for Andy: A drawing of an elf waving with a yellow background."
     },
     {
-      "name": "Jesse Lane",
+      "name": "Jesse L.", // Lane
       "photo": "../assets/profiles/pugface.png",
       "title": "Lead Web Developer",
       "description": "funny",
       "contact": {"url": ``, "iconsvg": ``},
       "alt": "Icon for Jesse: A photo of a black and white cat's face, looking at the camera."
-    },
+    },/*
     {
       "name": "Eamon Keating",
       "photo": "../assets/profiles/caffy.png",
@@ -46,6 +46,6 @@ var fruitbrawl_team = [
       "description": "funny",
       "contact": {"url": ``, "iconsvg": ``},
       "alt": "Icon for Aurora: A photo of Aurora smiling at the camera."
-    },
+    },*/
   ]
   
