@@ -7,14 +7,14 @@ var fruitbrawl_team = [
       "contact": {"url": ``, "iconsvg": ``},
       "alt": "Icon for Anne: A drawing of a strawberry with legs, with a purple background."
     },
-    {
+    /*{
       "name": "Kivrin M.", // Matthies
       "photo": "../assets/profiles/kivrin.png",
       "title": "Co-Designer & Playtester",
       "description": "funny",
       "contact": {"url": ``, "iconsvg": ``},
       "alt": "Icon for Kivrin: a photo of Kivrin."
-    },
+    },*/
     {
       "name": "Andy J.", // Jacobson-Mowery
       "photo": "../assets/profiles/rammytheduck.png",

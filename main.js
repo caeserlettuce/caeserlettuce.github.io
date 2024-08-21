@@ -8,7 +8,7 @@ var slideimgs = [
   },*/
   {
     "image": "/assets/siteimg/fbrawl_art2.png",
-    "description": "FruitBrawl concept art",
+    "description": "FruitBrawl art",
     "alt": "A digital drawing of Apple waving, with the text \"Fruit Brawl\" below."
   },
   {
@@ -23,7 +23,7 @@ var slideimgs = [
   },
   {
     "image": "/assets/siteimg/fbrawl-2.jpg",
-    "description": "FruitBrawl Kiwi build",
+    "description": "FruitBrawl early prototype",
     "alt": "A FruitBrawl build on a wooden table, called the \\\"Kiwi Build\\\""
   }
 ]
